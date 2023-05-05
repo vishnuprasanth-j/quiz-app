@@ -1,0 +1,59 @@
+.EndScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  .result-title{
+    text-decoration: underline wavy #0078c23a;
+
+
+  }
+    .EndScreen-bd {
+      text-align: center;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      h1:last-of-type {
+        margin-top: 1rem;
+        font-size: 4rem;
+      }
+      .color{
+       &.yellow{
+        background-color: yellow;
+        border-radius: 10px;
+       }    &.red{
+        background-color: red;
+        border-radius: 10px;
+       }  &.green{
+        background-color: green;
+        border-radius: 10px;
+       } 
+
+      }
+  
+      button {
+        padding: 12px 24px;
+        font-size: 18px;
+        background-color: #0077c2;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 1rem;
+  
+        &:hover {
+          background-color: #0077c236;
+        }
+      }
+    }
+  }
+  
