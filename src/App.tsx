@@ -12,6 +12,8 @@ interface GameStateContextProps {
   setUserName: React.Dispatch<React.SetStateAction<string>>;
   score: number;
   setScore: React.Dispatch<React.SetStateAction<number>>;
+  timer:number;
+  setTimer:React.Dispatch<React.SetStateAction<number>>;
 }
 
 export const GameStateContext = createContext<GameStateContextProps>({
@@ -21,6 +23,8 @@ export const GameStateContext = createContext<GameStateContextProps>({
   setUserName: () => {},
   score: 0,
   setScore: () => {},
+  timer:60,
+  setTimer:()=>{}
 });
 
 
@@ -28,6 +32,7 @@ function App() {
   const [gameState, setGameState] = useState<string>("home");
   const [userName, setUserName] = useState<string>("");
   const [score, setScore] = useState<number>(0);
+  const [timer, setTimer] = useState<number>(60);
   return (
     <div className="App">
            
@@ -39,6 +44,8 @@ function App() {
               setUserName,
               score,
               setScore,
+              timer,
+              setTimer
             }}
            >
         {gameState === "home" && <QuizDetailScreen />}

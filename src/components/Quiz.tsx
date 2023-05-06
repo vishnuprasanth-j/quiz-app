@@ -7,9 +7,9 @@ import './Quiz.scss'
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [optionChosen, setOptionChosen] = useState<string>("");
-  const [timer, setTimer] = useState<number>(60);
+  
 
-  const { score, setScore, setGameState } = useContext(GameStateContext);
+  const { score, setScore, setGameState,timer,setTimer } = useContext(GameStateContext);
 
   const chooseOption = (option: string) => {
     setOptionChosen(option);
